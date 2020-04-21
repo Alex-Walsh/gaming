@@ -221,7 +221,7 @@ class Video{
             var id = evt.uid;
             console.log("id", evt);
             if (id != rtc.params.uid) {
-                removeView(id);
+                this.removeView(id);
             }
             this.Toast.notice("peer leave")
             console.log('peer-leave', id);
@@ -262,7 +262,7 @@ class Video{
             rtc.remoteStreams = rtc.remoteStreams.filter(function (stream) {
                 return stream.getId() !== id
             })
-            removeView(id);
+            this.removeView(id);
             console.log('stream-removed remote-uid: ', id);
         })
         rtc.client.on("onTokenPrivilegeWillExpire", function(){
@@ -383,20 +383,24 @@ class Video{
         })
         this.Toast.info("publish")
         rtc.published = true
-    }
+         console.log(rtc.published);
+     }
 
      unpublish (rtc) {
-     /*   if (!rtc.client) {
+    if (!rtc.client) {
+
             return;
         }
         if (!rtc.published) {
+            console.log(rtc.published);
             return;
-        }*/
-        var oldState = rtc.published;
-        rtc.client.unpublish(rtc.localStream,(err)=>{
+        }
+
+         let oldState = rtc.published;
+         console.log(oldState);
+         rtc.client.unpublish(rtc.localStream,(err)=>{
             rtc.published = oldState;
             console.log("unpublish failed");
-            this.Toast.error("unpublish failed");
             console.error(err);
         })
         this.Toast.info("unpublish")
@@ -425,7 +429,7 @@ class Video{
                 var stream = rtc.remoteStreams.shift();
                 var id = stream.getId();
                 stream.stop();
-                removeView(id);
+                this.removeView(id);
             }
             rtc.localStream = null;
             rtc.remoteStreams = [];
