@@ -73,7 +73,7 @@ class Video{
                           text: resolution.name
                       }).appendTo("#cameraResolution");
                   })
-                  M.AutoInit();
+                  //M.AutoInit();
               })
      /*         var fields = this.fields;
               $("#publish").on("click", (e)=>{
