@@ -6,21 +6,28 @@
 </head>
 <style type="text/css">
     .video-grid{
-        width: 1000px;
-        height: 1000px;
+        border: #00bcd4 2px solid;
+        width: 420px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        overflow: hidden;
+        position:absolute;
+        flex-flow: wrap;
+        right: 100px;
+        justify-content: space-between;
     }
-    .local_stream{
-        margin: 5px;
+    #local_stream{
+        border: #F3C010 solid 2px;
+        margin: 2px;
         width: 200px;
-        height: 200px;
+        height: 150px;
     }
     .video-placeholder{
-        margin: 5px;
+        border:  #b2ff59 solid 2px;;
+        margin: 2px;
         width: 200px;
-        height: 200px;
+        height: 150px;
     }
 
 </style>
@@ -60,10 +67,7 @@
             appID:"a1e7f7e62ce3401397d2c7cba836979b",
             token:"0065f05c8ce1679426aac75f20b14e83bfcIABXK+lj323VF+1BXK5j8bQqib3clo3YTuNo1My1Lj47j/fI+dsAAAAAEAALV6bz4ZmgXgEAAQDEmaBe",
             channel:"1111",
-            //'720p','480p','1080p','default'
-            //'live','rtc'
             mode:"live",
-            //''
             codec:"h264"
         }
     );
