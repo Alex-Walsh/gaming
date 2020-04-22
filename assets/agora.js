@@ -1,7 +1,7 @@
 class Video{
     constructor(options = {}){
-        let {appID,token,channel,microphoneId,cameraResolution,codec,mode} = options;
-        ['appID', 'token', 'channel','cameraResolution','mode','codec','microphoneId'].forEach(item => {
+        let {appID,token,channel,codec,mode} = options;
+        ['appID', 'token', 'channel','mode','codec'].forEach(item => {
             this[item] = eval(item)
         });
         this.resolutions = [
@@ -133,7 +133,6 @@ class Video{
          obj.appID=this.appID;
          obj.token=this.token;
          obj.channel=this.channel;
-         obj.cameraResolution=this.cameraResolution;
          obj.mode=this.mode;
          obj.codec=this.codec;
         return obj;

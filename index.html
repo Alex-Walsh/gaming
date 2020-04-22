@@ -14,7 +14,7 @@
     }
     .local_stream{
         margin: 5px;
-       width: 200px;
+        width: 200px;
         height: 200px;
     }
     .video-placeholder{
@@ -24,6 +24,20 @@
     }
 
 </style>
+<form id="form">
+    <div class="input-field">
+        <label for="cameraId" class="active">CAMERA</label>
+        <select name="cameraId" id="cameraId"></select>
+    </div>
+    <div class="input-field">
+        <label for="microphoneId" class="active">MICROPHONE</label>
+        <select name="microphoneId" id="microphoneId"></select>
+    </div>
+    <div class="input-field">
+        <label for="cameraResolution" class="active">CAMERA RESOLUTION</label>
+        <select name="cameraResolution" id="cameraResolution"></select>
+    </div>
+</form>
 <div id="button">
     <button class="button" id="join">JOIN</button>
     <button class="button" id="leave">LEAVE</button>
@@ -46,9 +60,7 @@
             appID:"a1e7f7e62ce3401397d2c7cba836979b",
             token:"0065f05c8ce1679426aac75f20b14e83bfcIABXK+lj323VF+1BXK5j8bQqib3clo3YTuNo1My1Lj47j/fI+dsAAAAAEAALV6bz4ZmgXgEAAQDEmaBe",
             channel:"1111",
-            microphoneId:"default",
             //'720p','480p','1080p','default'
-            cameraResolution:"720p",
             //'live','rtc'
             mode:"live",
             //''
