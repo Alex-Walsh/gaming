@@ -253,7 +253,7 @@ class Video{
             console.log('stream-subscribed remote-uid: ', id);
         })
         // Occurs when the remote stream is removed; for example, a peer user calls Client.unpublish.
-        rtc.client.on("stream-removed", function (evt) {
+        rtc.client.on("stream-removed",(evt)=>{
             var remoteStream = evt.stream;
             var id = remoteStream.getId();
 
